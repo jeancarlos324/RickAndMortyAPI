@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+    --primary-color:#062226;
+    --secondary-color:#11B1CF;
+    --green-gradiant-1:#085031;
+    --green-gradiant-2:#208D45;
+    --green-gradiant-3:#95C37B;
+    --green-gradiant-4:#A7CB54;
+    --white-variant-3:#ffffff;
+    --font-type:'Roboto Mono'
+}
+body{
+    font-family: 'Roboto Mono', monospace;
+}
