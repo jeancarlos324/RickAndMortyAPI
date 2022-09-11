@@ -8,9 +8,17 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="w-screen h-screen flex items-center justify-center">
+    <div className="flex items-center justify-center w-screen h-screen bg-gradient-to-r from-primary-color to-tertiary-color">
       {/* <Chip/> */}
-      <ChipCharacter title="Raza" content="Humano" className=" bg-green-600"/>
+      <div className='w-2/3'>
+        <form>
+          <input type="search" name="" id="" />
+          <button>Buscar</button>
+        </form>
+      </div>
+      <div className='w-1/3'>
+        <img src='https://mystickermania.com/cdn/stickers/rick-and-morty/sticker_2060-512x512.png'/>
+      </div>
     </div>
   )
 }

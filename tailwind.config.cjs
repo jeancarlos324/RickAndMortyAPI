@@ -4,8 +4,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'academlo': '#243c5a',
+        'primary-color':'#121212',
+        'secondary-color':'#11B1CF',
+        'tertiary-color':'#0B3E46',
+        'green-gradiant-1':'#085031',
+        'green-gradiant-2':'#208D45',
+        'green-gradiant-3':'#95C37B',
+        'green-gradiant-4':'#A7CB54',
+        'white-variant':'#ffffff'
       },
+      fontSize: {
+        'title-content': '2em',
+        'title-chip': '1.125em',
+        'content-chip': '1.5em',
+      }
     },
   },
   plugins: [],
