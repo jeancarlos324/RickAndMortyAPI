@@ -16,7 +16,7 @@ module.exports = {
       fontSize: {
         'title-content': '2em',
         'title-chip': '1.125em',
-        'content-chip': '1.5em',
+        'content-chip': '1.4em',
       }
     },
   },
