@@ -70,7 +70,6 @@ const RickAndMorty = () => {
         </div>
         <div className="text-white-variant">
             <div>{data.name}</div>
-            <div>{data.residents.length}</div>
             <div>{data.dimension}</div>
             <div>{data.type}</div>
         </div>
