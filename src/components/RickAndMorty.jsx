@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import useConexion from "../utilities/useConexion";
 import useLocation from "../utilities/useLocation";
+
 import Chip from "./chip/Chip";
+import Card from "./cards/Card";
 const RickAndMorty = () => {
   let URL = "https://rickandmortyapi.com/api/location/";
 
@@ -21,7 +23,7 @@ const RickAndMorty = () => {
     setfilterData(filterLocation);
     searchLocation == "" ? setIsActive(false) : setIsActive(true);
   };
-  console.log(location);
+  //console.log(data);
   return (
     <>
       <div className="w-3/5 flex flex-col items-center gap-5">
@@ -96,20 +98,24 @@ const RickAndMorty = () => {
           />
         </div>
       </div>
-      <div className="flex w-2/5 items-center justify-center">
+      <div className=" w-2/5 items-center justify-center flex ">
         {data.residents?.length !== 0 ? (
           <motion.div
-          className="bg-green-400 "
+            className="bg-green-400 "
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ type: "spring" }}
           >
-            -------Insert Card Component----------
+            <div className="grid grid-cols-2 overflow-y-hidden">
+              {data.residents?.map((item)=>(
+          <div key={item}><Card data={item}/></div>))}
+             
+            </div>
           </motion.div>
         ) : (
           <motion.div
-            className="animation-frame "
+            className="animation-frame"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
