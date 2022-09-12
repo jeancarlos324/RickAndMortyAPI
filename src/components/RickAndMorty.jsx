@@ -20,14 +20,13 @@ const RickAndMorty = () => {
     setfilterData(filterLocation);
     searchLocation == "" ? setIsActive(false) : setIsActive(true);
   };
-
+  console.log(data);
   return (
     <>
       <div className="w-3/5 flex flex-col items-center gap-5">
         <div>
           <img src="https://media.cdn.adultswim.com/uploads/20210428/21428161947-rick-and-morty-logo-png.png" />
         </div>
-        <div className="text-white-variant">{data.name}</div>
         <div className="w-2/3 flex gap-3 h-[50px]">
           <div className="grow relative px-2 border-2 rounded-md text-white-variant text-title-chip">
             <input
@@ -55,7 +54,6 @@ const RickAndMorty = () => {
               )}
             </div>
           </div>
-
           <motion.button
             whileHover={{
               transition: { duration: 0.2, delay: 0.1 },
@@ -69,6 +67,12 @@ const RickAndMorty = () => {
           >
             Buscar
           </motion.button>
+        </div>
+        <div className="text-white-variant">
+            <div>{data.name}</div>
+            <div>{data.residents.length}</div>
+            <div>{data.dimension}</div>
+            <div>{data.type}</div>
         </div>
       </div>
       <div className="flex w-2/5 items-center">
