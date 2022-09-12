@@ -37,7 +37,7 @@ const RickAndMorty = () => {
             />
             <div className="w-full h-full absolute -left-0">
               {isActive && (
-                <div className="flex flex-col overflow-y-auto h-[400%]">
+                <div className="flex flex-col overflow-y-auto h-[400%] bg-primary-color">
                   {filterData.map((item) => (
                     <div
                       onClick={() => {
