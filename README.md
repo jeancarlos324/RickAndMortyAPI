@@ -4,7 +4,8 @@ Building aplication with react and Rick and Morty API...
 https://rickandmortiapireact.netlify.app/
 ### Link Repo
 https://github.com/jeancarlos324/RickAndMortyAPI/
-###Collaborators
+
+### Collaborators
 - Jean Carlos Ticona Gutierrez
 - David Samuel Carmona
  
