@@ -14,7 +14,7 @@ module.exports = {
         'white-variant':'#ffffff'
       },
       fontSize: {
-        'title-content': '2em',
+        'title-content': '1.8em',
         'title-chip': '1.125em',
         'content-chip': '1.4em',
       }

@@ -9,22 +9,38 @@ const Card = (data) => {
   useEffect(() => {
     axios.get(`${data.data}`).then((res) => setCharacter(res.data));
   }, []);
-  console.log(character);
   return (
     <>
-      <div className=" p-2 bg-primary-color text-white-variant border-green-gradiant-3 border-2">
+      <div className=" h-full p-2 bg-gradient-to-tr from-primary-color text-white-variant border-green-gradiant-3 border-2 rounded-3xl">
         <div className="relative">
-          <div className="absolute bg-black left-0 top-4 p-1">
-            <h5>{character.status}</h5>
+          <div className="flex top-5 -left-2 grow justify-center font-bold items-center gap-2 absolute p-1 px-2 rounded-r-2xl bg-[#11B1CFcc] backdrop-blur-sm cursor-default hover:scale-105">
+            {character.status == "Dead" ? (
+              <>
+                <h5 className="text-primary-color uppercase">{character.status}</h5>
+                <i className="fa-solid fa-skull text-primary-color"></i>
+              </>
+            ) : character.status == "Alive" ? (
+              <>
+                <h5 className="text-green-gradiant-2 uppercase">{character.status}</h5>
+                <i className="fa-solid fa-heart text-green-gradiant-2"></i>
+              </>
+            ) : (
+              <>
+                <h5>{character.status}</h5>
+                <i className="fa-solid fa-circle-question"></i>
+              </>
+            )}
           </div>
-          <div className="w-[200px] flex items-center h-[200px]">
-            <img src={character.image} className="w-full h-full" />
+          <div className="flex items-center p-2">
+            <img src={character.image} className="w-full h-full " />
           </div>
         </div>
         <div className="flex flex-col gap-2 p-2 ">
-          <h2 className="text-title-content text-center ">{character.name}</h2>
+          <h2 className="text-title-content text-center truncate ">
+            {character.name}
+          </h2>
           <ChipContent
-            className="items-start"
+            className="items-start "
             title={"raza: "}
             content={character.species}
           />
